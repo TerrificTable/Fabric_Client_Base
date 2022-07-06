@@ -19,7 +19,7 @@ public class Mod implements ModInitializer {
 	// Create Fabric LOGGER Object
 	public static final Logger LOGGER = LoggerFactory.getLogger("mod");
 	// Create / initialize variables object
-	public static final Variables variables = new Variables("Mod", "1.0.0", "1.19.X");
+	public static final Variables variables = new Variables("Mod", "1.0.0", "1.19.0");
 	// Create commandManager object / instance of CommandManager class
 	public static CommandManager commandManager;
 	// Create moduleManager object / instance of ModuleManager class
