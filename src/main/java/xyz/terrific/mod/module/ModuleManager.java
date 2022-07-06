@@ -2,6 +2,7 @@ package xyz.terrific.mod.module;
 
 import xyz.terrific.mod.Mod;
 import xyz.terrific.mod.module.modules.render.hud.Hud;
+import xyz.terrific.mod.module.modules.testing.PacketLog;
 import xyz.terrific.mod.module.modules.testing.TestModule;
 
 public class ModuleManager {
@@ -13,6 +14,7 @@ public class ModuleManager {
 
         /* {  Testing  } */
         addModule(new TestModule());
+        addModule(new PacketLog());
 
         /* {  Combat  } */
 
