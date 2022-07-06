@@ -1,0 +1,12 @@
+xyz.terrific.mod
+xyz.terrific.mod.command
+xyz.terrific.mod.command.commands
+xyz.terrific.mod.event
+xyz.terrific.mod.event.events
+xyz.terrific.mod.helper
+xyz.terrific.mod.mixin
+xyz.terrific.mod.module
+xyz.terrific.mod.module.modules.render.hud
+xyz.terrific.mod.module.modules.render.hud.elements
+xyz.terrific.mod.module.modules.testing
+xyz.terrific.mod.utils
