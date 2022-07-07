@@ -1,5 +1,6 @@
 package xyz.terrific.mod.module.modules.render.hud;
 
+import net.minecraft.client.util.Window;
 import xyz.terrific.mod.event.events.EventRender2D;
 import xyz.terrific.mod.helper.Wrapper;
 
@@ -9,6 +10,7 @@ public abstract class HudElement {
     public String description; // Hud Element description
     // int[x, y]
     public int[] position; // x,y position of hud element
+    public boolean showElement; // is element going to be shown
 
     // Overloaded Constructor...
     public HudElement(String name, String description, int[] position) {
@@ -31,6 +33,17 @@ public abstract class HudElement {
      * abstract method to render hud element
      */
     public abstract void show(EventRender2D event);
+
+
+    public Window getWindow() {
+        return Wrapper.INSTANCE.getWindow();
+    }
+    public int getWidth() {
+        return Wrapper.INSTANCE.getWindow().getWidth();
+    }
+    public int getHeight() {
+        return Wrapper.INSTANCE.getWindow().getHeight();
+    }
 
     /**
      * get Name of Hud Element
