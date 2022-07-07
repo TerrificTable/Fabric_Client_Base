@@ -3,7 +3,6 @@ package xyz.terrific.mod.event.events;
 import net.minecraft.network.Packet;
 import xyz.terrific.mod.event.Event;
 
-// !!! NOT FINISHED !!!
 public class EventPacket extends Event<EventPacket> {
 
     public Packet<?> packet;
