@@ -4,13 +4,15 @@ import xyz.terrific.mod.Mod;
 import xyz.terrific.mod.event.events.EventRender2D;
 import xyz.terrific.mod.helper.FontHelper;
 import xyz.terrific.mod.module.modules.render.hud.HudElement;
+import xyz.terrific.mod.utils.ColorUtils;
 
-public class NameAndVersion extends HudElement {
+public class Watermark extends HudElement {
     /**
      * Hud Element Constructor
      */
-    public NameAndVersion() {
+    public Watermark() {
         super("NameAndVersionHud", new int[] { 10, 10 });
+        this.showElement = true;
     }
 
     /**
@@ -20,7 +22,7 @@ public class NameAndVersion extends HudElement {
     @Override
     public void show(EventRender2D event) {
         // Draw Mod name and Mod Version on Hud
-        FontHelper.INSTANCE.drawWithShadow(event.getPoseStack(), Mod.variables.MOD_NAME + " V." + Mod.variables.MOD_VERSION, getPosition()[0], getPosition()[1], 0xFFFFFF);
+        FontHelper.INSTANCE.drawWithShadow(event.getPoseStack(), Mod.variables.MOD_NAME + " v." + Mod.variables.MOD_VERSION, getPosition()[0], getPosition()[1], ColorUtils.rainbowNormal(25f, 255f, 255f));
     }
 
 }
