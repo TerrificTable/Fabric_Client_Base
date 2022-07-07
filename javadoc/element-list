@@ -9,4 +9,6 @@ xyz.terrific.mod.module
 xyz.terrific.mod.module.modules.render.hud
 xyz.terrific.mod.module.modules.render.hud.elements
 xyz.terrific.mod.module.modules.testing
+xyz.terrific.mod.module.setting
+xyz.terrific.mod.module.setting.settings
 xyz.terrific.mod.utils
