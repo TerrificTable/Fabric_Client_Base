@@ -1,6 +1,7 @@
 package xyz.terrific.mod.module;
 
 import xyz.terrific.mod.event.Event;
+import xyz.terrific.mod.module.setting.Setting;
 
 public class Module {
 
@@ -10,6 +11,8 @@ public class Module {
     public String displayName; // Modules display name (not used currently)
     public Category category; // Module category
     public boolean toggled; // Module toggled state
+
+    public Setting[] settings;
 
     // Overloaded Constructor... means: you can create a new module not having to specify all the variables
     public Module(String name, String displayName, String description, int keyCode, Category category, boolean toggled) {
@@ -153,6 +156,36 @@ public class Module {
      */
     public void toggle() {
         this.toggled = !this.toggled;
+    }
+
+    /**
+     * add Settings to module
+     * @param settings Settings to add
+     */
+    public void addSettings(Setting... settings) {
+        this.settings = settings;
+    }
+
+    /**
+     * get all settings
+     * @return Array of Settings (Setting[])
+     */
+    public Setting[] getSettings() {
+        return this.settings;
+    }
+
+    /**
+     * get setting by name
+     * @param name name of setting
+     * @return requested Setting
+     */
+    public Setting getSettingByName(String name) {
+        for (Setting setting : this.settings) {
+            if (setting.name.equalsIgnoreCase(name)) {
+                return setting;
+            }
+        }
+        return null;
     }
 
 

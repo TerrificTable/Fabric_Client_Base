@@ -1,6 +1,7 @@
 package xyz.terrific.mod.command;
 
 import xyz.terrific.mod.Mod;
+import xyz.terrific.mod.command.commands.SettingCommand;
 import xyz.terrific.mod.command.commands.TestCommand;
 import xyz.terrific.mod.command.commands.ToggleCommand;
 import xyz.terrific.mod.event.Event;
@@ -14,6 +15,7 @@ public class CommandManager {
      */
     public void init() {
 
+        addCommand(new SettingCommand());
         addCommand(new ToggleCommand());
         addCommand(new TestCommand());
 
