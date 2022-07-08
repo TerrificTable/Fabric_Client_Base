@@ -23,9 +23,9 @@ public class ColorUtils {
         return new Color(lastRed, lastGreen, lastBlue);
     }
 
-    public static int rainbowNormal(float seconds, float saturation, float brightness) {
+    public static Color rainbowNormal(float seconds, float saturation, float brightness) {
         float hue = (System.currentTimeMillis() % (int)(seconds * 1000)) / (float)(seconds * 1000);
-        return Color.HSBtoRGB(hue, saturation, brightness);
+        return new Color(Color.HSBtoRGB(hue, saturation, brightness));
     }
 
     public static int rainbowWave(float seconds, float saturation, float brightness, long index) {
@@ -37,7 +37,7 @@ public class ColorUtils {
         float hue = (float) (System.currentTimeMillis() + offset) / 1.0E10f % 1.0f;
         long c = Long.parseLong(Integer.toHexString(Color.HSBtoRGB(hue, 1.0f, 1.0f)), 16);
         Color color = new Color((int) c);
-        return new Color(color.getRed() / 255.0f * fade, color.getGreen() / 255.0f * fade, color.getBlue() / 255.0f * fade, color.getAlpha() / 255.0f);
+        return new Color((float) ((color.getRed() / 255.0f * fade > 1.0) ? 1.0 : color.getRed() / 255.0f * fade), (float) ((color.getGreen() / 255.0f * fade > 1.0) ? 1.0 : color.getGreen() / 255.0f * fade), (float) ((color.getBlue() / 255.0f * fade > 1.0) ? 1.0 : color.getBlue() / 255.0f * fade), color.getAlpha() / 255.0f);
     }
 
 }
