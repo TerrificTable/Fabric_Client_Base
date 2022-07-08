@@ -7,11 +7,11 @@ public class Variables {
     // ModName
     public String MOD_NAME           = "Mod";
     // ModVersion
-    public String MOD_VERSION        = "1.0.0";
+    public String MOD_VERSION;
     // ModAuthor
     public String MOD_AUTHOR         = "TerrificTable";
     // Minecraft Version (it's only for information about the client, it does not actually change / set the minecraft version)
-    public String MOD_MC_VERSION     = "1.19.0";
+    public String MOD_MC_VERSION;
 
     public String PREFIX = ">";
 
